@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+    <title>Ingredients Page</title>
+
+    <style>
+        /* Unused */
+        .myflex-container-top {
+            display: flex;
+            flex-direction: column;
+            /* background-color: rgb(228, 231, 22); */
+            background-image: url("images/garlic.JPG");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* align-items: flex-end; */
+            overflow: scroll;
+            align-content: stretch;
+            flex: nowrap;
+        }
+
+        /* Row container */
+        .myflex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(218, 199, 149);
+            opacity: 100%;
+            align-content: center;
+            justify-content: center;
+            flex: nowrap;
+        }
+
+        /* Column container */
+        .myflex-container-col {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(218, 199, 149);
+            align-content: center;
+            justify-content: center;
+            flex: nowrap;
+        }
+
+        /* Colored flexbox */
+        .flexbox-color {
+            display: flex;
+            min-width: 0;
+            background-color: rgb(200, 215, 233);
+            /* background-color: #bb3333; */
+            margin: 10px;
+            padding: 10px;
+            font-size: 8px;
+            opacity: 100%;
+            /* margin-left: 2%; */
+        }
+
+        /* Uncolored flexbox */
+        .flexbox {
+            display: flex;
+            min-width: 0;
+            /* background-color: rgb(200, 215, 233); */
+            /* background-color: #bb3333; */
+            margin: 10px;
+            padding: 10px;
+            font-size: 8px;
+            opacity: 100%;
+            /* margin-left: 2%; */
+        }
+
+        .resize {
+            /* width: 1500px; */
+            width: auto;
+            height: auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            opacity: 100%;
+        }
+
+        .flextext {
+            width: auto;
+            height: auto;
+            font-size: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown container">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ingredient<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+
+    <div class="myflex-container-col img-fluid resize">
+
+        <div class="myflex-container img-fluid resize">
+            <div class="flexbox" style="flex-grow: 10">
+                <div class="myflex-container-col img-fluid resize">
+                    <div id="benefits" class="flexbox-color" style="flex-grow: 6">
+                        <img src="images/bannerbg.svg">
+                    </div>
+                    <div class="flexbox-color" style="flex-grow: 4">
+                        <iframe id="origin_map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56592457.93916351!2d67.47499015074814!3d30.033142049231426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChina!5e0!3m2!1sen!2sca!4v1647628105514!5m2!1sen!2sca"
+                            width=100% height=100% allowfullscreen="" loading=" lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="flexbox-color"><img src="images/garlic.JPG"></div>
+        </div>
+        <div class="myflex-container img-fluid resize">
+            <div class="flexbox"><img src="images/name.svg"></div>
+            <div class="flexbox"><img src="images/cold.svg"></div>
+            <div class="flexbox"><img src="images/vegatable.svg"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

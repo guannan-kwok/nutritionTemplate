@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --main-bg-color: rgb(9, 38, 78);
+            --main-fg-color: white;
+        }
+
+        .title {
+            width: 100%;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            color: white;
+        }
+
+        /* Unused */
+        .myflex-container-top {
+            display: flex;
+            flex-direction: column;
+            /* background-color: rgb(228, 231, 22); */
+            background-image: url("images/garlic.JPG");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* align-items: flex-end; */
+            overflow: scroll;
+            align-content: stretch;
+            flex: nowrap;
+        }
+
+        /* Row container */
+        .myflex-container {
+            display: flex;
+            flex-direction: row;
+            /* background-color: rgb(218, 199, 149); */
+            background-color: var(--main-bg-color);
+            color: var(--main-fg-color);
+            opacity: 100%;
+            align-content: center;
+            justify-content: center;
+            flex: nowrap;
+        }
+
+        /* Column container */
+        .myflex-container-col {
+            display: flex 1;
+            flex-direction: column;
+            /* background-color: rgb(0, 0, 0); */
+            align-content: center;
+            justify-content: center;
+            flex: nowrap;
+        }
+
+        .myflex-container-col-pad {
+            display: flex 1;
+            flex-direction: column;
+            /* background-color: rgb(218, 199, 149); */
+            align-content: center;
+            justify-content: center;
+            flex: nowrap;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* Colored flexbox */
+        .flexbox-color {
+            display: flex;
+            min-width: 0;
+            background-color: rgb(104, 156, 219);
+            margin: 10px;
+            padding: 10px;
+            font-size: 14px;
+            opacity: 100%;
+        }
+
+        .box-color {
+            display: flex;
+            min-width: 70%;
+            min-height: 70%;
+            /* background-color: rgb(218, 199, 149); */
+            margin: 10px;
+            padding: 10px;
+            font-size: 14px;
+            opacity: 100%;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+
+        /* Uncolored flexbox */
+        .flexbox {
+            display: flex;
+            /* background-color: rgb(218, 199, 149); */
+            min-width: 0;
+            margin: 10px;
+            padding: 10px;
+            font-size: 14px;
+            opacity: 100%;
+        }
+
+        .flexbox-nopad {
+            display: flex;
+            min-width: 0;
+            font-size: 14px;
+            opacity: 100%;
+        }
+
+        .flexbox-color-nopad {
+            display: flex;
+            min-width: 70%;
+            /* background-color: rgb(200, 215, 233); */
+            font-size: 14px;
+            padding: px;
+            opacity: 100%;
+        }
+
+        .resize {
+            width: auto;
+            height: auto;
+        }
+
+        .flexgrow-10 {
+            flex-grow: 10;
+        }
+
+        .flexgrow-2 {
+            flex-grow: 2;
+        }
+
+        .flextext {
+            display: flex;
+            /* margin: 10px;
+            padding: 10px; */
+            width: 30%;
+            min-width: 00;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            opacity: 100%;
+        }
+
+        .scrolltext {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            line-height: 1em;
+            overflow: scroll;
+            padding: 0px;
+        }
+
+        body {
+            scrollbar-width: thin;
+            scrollbar-color: var(--main-fg-color) var(--main-bg-color);
+        }
+        
+        /* For Chrome, etc other browsers using webkit */
+        *::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: var(--main-bg-color);
+        }
+
+        *::-webkit-scrollbar-thumb {
+            /* background-color: var(--main-bg-color); */
+            border-radius: 15px;
+            border: 10px solid var(--main-fg-color);
+        } 
+    </style>
+</head>
+
+<title>Ingredients Page</title>
+
+<body>
+    <div class="dropdown container">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ingredient<span
+                    class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+
+    <div class="myflex-container-col img-fluid resize">
+
+        <div id="top" class="myflex-container img-fluid resize flexgrow-10">
+
+            <!-- Left bottom: benefits and origin / history -->
+            <div class="flexbox">
+
+                <!-- Column layout: benefits and origin/history -->
+                <div class="myflex-container-col img-fluid resize">
+
+                    <!-- Benefits -->
+                    <div class="flexbox-color-nopad">
+                        <div class="myflex-container-col img-fluid resize">
+                            <div class="flexbox-nopad">
+                                <img src="images/bannerbg.svg">
+                            </div>
+                            <div class="flexbox-nopad">
+                                <div id="benefits-text" class="scrolltext">
+                                    Ginger is a common spice used worldwide, whether for meals or as a folk
+                                    medicine.[35] Ginger can be used for a variety
+                                    of food items such as vegetables, candy, soda, pickles, and alcoholic beverages.[31]
+
+                                    Ginger is a fragrant kitchen spice.[5] Young ginger rhizomes are juicy and fleshy
+                                    with a mild taste. They are often
+                                    pickled in vinegar or sherry as a snack or cooked as an ingredient in many dishes.
+                                    They can be steeped in boiling water
+                                    to make ginger herb tea, to which honey may be added. Ginger can be made into candy
+                                    or ginger wine.
+
+                                    Mature ginger rhizomes are fibrous and nearly dry. The juice from ginger roots is
+                                    often used as a seasoning in Indian
+                                    recipes and is a common ingredient of Chinese, Korean, Japanese, Vietnamese, and
+                                    many South Asian cuisines for flavoring
+                                    dishes such as seafood, meat, and vegetarian dishes.
+
+                                    Fresh ginger can be substituted for ground ginger at a ratio of six to one, although
+                                    the flavours of fresh and dried
+                                    ginger are somewhat different. Powdered dry ginger root is typically used as a
+                                    flavouring for recipes such as
+                                    gingerbread, cookies, crackers and cakes, ginger ale, and ginger beer. Candied
+                                    ginger or crystallized ginger, known in
+                                    the UK as "stem ginger", is the root cooked in sugar until soft, and is a type of
+                                    confectionery. Fresh ginger may be
+                                    peeled before eating. For longer-term storage, the ginger can be placed in a plastic
+                                    bag and refrigerated or frozen.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Padding -->
+                    <div class="flexbox" style="flex-grow: 2">
+                    </div>
+
+                    <!-- Origin / History  -->
+                    <div class="flexbox-color-nopad">
+                        <div class="myflex-container-col img-fluid resize">
+                            <div class="flexbox-nopad">
+                                <img src="images/bannerbg.svg">
+                            </div>
+                            <div class="flexbox-nopad">
+                                <iframe id="origin-map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56592457.93916351!2d67.47499015074814!3d30.033142049231426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChina!5e0!3m2!1sen!2sca!4v1647628105514!5m2!1sen!2sca"
+                                    width=100% height=100% allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                            <div class="flexbox-nopad">
+                                <div id="history-text" class="scrolltext" style="min-height: 20vh" ;>
+                                    Ginger originated from Maritime Southeast Asia. It is a true cultigen and does not
+                                    exist in its wild state.[9][10] The
+                                    most ancient evidence of its domestication is among the Austronesian peoples where
+                                    it was among several species of
+                                    ginger cultivated and exploited since ancient times. They cultivated other gingers
+                                    including turmeric (Curcuma longa),
+                                    white turmeric (Curcuma zedoaria), and bitter ginger (Zingiber zerumbet). The
+                                    rhizomes and the leaves were used to
+                                    flavour food or eaten directly. The leaves were also used to weave mats. Aside from
+                                    these uses, ginger had religious
+                                    significance among Austronesians, being used in rituals for healing and for asking
+                                    protection from spirits. It was also
+                                    used in the blessing of Austronesian ships
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right bottom: Ingredient picture. Don't make it a flex box -->
+            <div id="main-image" class="box-color"><img src="images/garlic.JPG"></div>
+        </div>
+
+        <!-- Name, hot/chold, category -->
+        <div id="bottom" class="myflex-container img-fluid resize">
+            <div id="name" class="flextext" style="flex-shrink: 100; font-size: 2vw; ">
+                Ginger<br>
+                生姜<br>
+                ショウガ<br>
+                生姜생강<br>
+            </div>
+            <div id="hotcold" class="flexbox" style="flex-shrink: 100"><img src="images/cold.svg"></div>
+            <div id="category" class="flexbox" style="flex-shrink: 100"><img src="images/vegatable.svg"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

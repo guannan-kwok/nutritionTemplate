@@ -1,0 +1,203 @@
+:root {
+            --main-bg-color: #F2DC96;
+            --main-fg-color: black;
+            --scrollbarbg: grey;
+            --scrollbarwindow:#F2DC96;
+        }
+        
+        .container {
+            background-color: var(--main-bg-color);
+            color: var(--main-fg-color);
+        }
+
+        .container-fluid {
+            background-color: var(--main-bg-color);
+            color: var(--main-fg-color);
+        }
+
+        .title {
+            width: 100%;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+        }
+
+        /* Unused */
+        .myflex-container-top {
+            display: flex;
+            flex-direction: column;
+            /* background-color: rgb(228, 231, 22); */
+            background-image: url("images/garlic.JPG");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* align-items: flex-end; */
+            overflow: scroll;
+            align-content: stretch;
+            flex: nowrap;
+        }
+
+        /* Row container */
+        .myflex-container {
+            display: flex;
+            flex-direction: row;
+            /* background-color: rgb(218, 199, 149); */
+            background-color: var(--main-bg-color);
+            color: var(--main-fg-color);
+            opacity: 100%;
+            align-content: center;
+            justify-content: center;
+            flex: nowrap;
+        }
+
+        /* Column container */
+        .myflex-container-col {
+            display: flex 1;
+            flex-direction: column;
+            /* background-color: rgb(0, 0, 0); */
+            align-content: center;
+            justify-content: center;
+            flex: nowrap;
+        }
+
+        .myflex-container-col-pad {
+            display: flex 1;
+            flex-direction: column;
+            /* background-color: rgb(218, 199, 149); */
+            align-content: center;
+            justify-content: center;
+            flex: nowrap;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* Colored flexbox */
+        .flexbox-color {
+            display: flex;
+            min-width: 0;
+            background-color: rgb(104, 156, 219);
+            margin: 10px;
+            padding: 10px;
+            font-size: 14px;
+            opacity: 100%;
+        }
+
+        .box-color {
+            display: flex;
+            min-width: 70%;
+            min-height: 70%;
+            /* background-color: rgb(218, 199, 149); */
+            margin: 10px;
+            padding: 10px;
+            font-size: 14px;
+            opacity: 100%;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+
+        /* Uncolored flexbox */
+        .flexbox {
+            display: flex;
+            /* background-color: rgb(218, 199, 149); */
+            min-width: 0;
+            margin: 10px;
+            padding: 10px;
+            font-size: 14px;
+            opacity: 100%;
+        }
+
+        .flexbox-nopad {
+            display: flex;
+            min-width: 0;
+            font-size: 14px;
+            opacity: 100%;
+        }
+
+        .flexbox-color-nopad {
+            display: flex;
+            min-width: 70%;
+            /* background-color: rgb(200, 215, 233); */
+            font-size: 14px;
+            padding: px;
+            opacity: 100%;
+        }
+
+        .resize {
+            width: auto;
+            height: auto;
+        }
+
+        .flexgrow-10 {
+            flex-grow: 10;
+        }
+
+        .flexgrow-2 {
+            flex-grow: 2;
+        }
+
+        .flextext {
+            display: flex;
+            /* margin: 10px;
+            padding: 10px; */
+            width: 30%;
+            min-width: 00;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: auto;
+            height: auto;
+            opacity: 100%;
+        }
+
+        .scrolltext {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            line-height: 1em;
+            overflow: scroll;
+            padding: px;
+        }
+
+        body {
+            scrollbar-width: thin;
+            scrollbar-color: var(--scrollbarwindow) var(--scrollbarbg);
+        }
+        
+
+        /* For Chrome, etc other browsers using webkit */
+        *::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: var(--scrollbarwindow);
+        }
+
+        *::-webkit-scrollbar-thumb {
+            /* background-color: var(--main-bg-color); */
+            border-radius: 15px;
+            border: 10px solid var(--scrollbarbg);
+        }
+
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            .imgfluid{
+                max-width: 30%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 20px;
+            }
+            .description{
+                max-width: 70%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                padding-top: 20px;
+            }
+        }
