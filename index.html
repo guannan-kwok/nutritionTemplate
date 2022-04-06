@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<title>Ingredients Page</title>
+
+<body>
+    <script src='./javascript/data.js'></script>
+    <script src='./javascript/logic.js'></script>
+
+    <div class="container">
+        <div class="dropdown">
+            <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="ingredientsMenu"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Ingredient
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="ingredientsMenu">
+                <li><a class="dropdown-item" href="#" onclick="switchIngredient('Ginger')">Ginger</a></li>
+                <li><a class="dropdown-item" href="#" onclick="switchIngredient('Garlic')">Garlic</a></li>
+                <li><a class="dropdown-item" href="#" onclick="switchIngredient('Mushroom')">Mushroom</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <section>
+    <div class="container">
+
+        <div class="d-flex flex-row justify-content-md-left align-items-top">
+
+            <!-- Left column layout: benefits and origin/history -->
+            <div class="col-md-4">
+
+                <!-- Benefits -->
+                <div class="p-1">
+                    <img class="img-fluid" src="images/Benefits3.svg">
+                </div>
+                <div class="p-1">
+                    <div id="benefits-text" class="scrolltext">
+                        <ul>
+                            <li>Contains gingerol, which has powerful medicinal properties.
+                            <li>Can treat many forms of nausea, especially morning sickness.
+                            <li>May help with weight loss.
+                            <li>Can help with osteoarthritis.
+                            <li>May drastically lower blood sugars and improve heart disease risk factors.
+                            <li>Can help treat chronic indigestion.
+                        </ul>
+                    </div>
+                </div>
+
+                <div><br></div>
+                <!-- Origin / History  -->
+                <div class="p-1">
+                    <img class="img-fluid" src="images/Origin2.svg">
+                </div>
+                <div class="p-1 h-25">
+                    <iframe id="origin-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56592457.93916351!2d67.47499015074814!3d30.033142049231426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChina!5e0!3m2!1sen!2sca!4v1647628105514!5m2!1sen!2sca"
+                        width=100% height=100% allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                <div class="p-1">
+                    <div id="history-text" class="scrolltext" style="min-height: 10vh;" ;>
+                        The known history of ginger dates back about 5000 years. Its native home is debated but its
+                        medicinal and spiritual uses were first documented in Southeast Asia, India and China. Like many
+                        other spices, ginger was once a costly commodity. In the 14th century, a pound of ginger cost as
+                        much as one sheep!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right column layout -->
+            <div class="col-md-8">
+
+                <div class="row ">
+                    <!--
+                    <div id="imageSlides" class="carousel slide carousel-fade" 
+                        data-bs-ride="carousel"
+                        data-bs-interval="false">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#slideIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#slideIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <img src="images/ginger.jpg" class="img-fluid w-100" alt="...">
+                            </div>
+                            <div class="carousel-item active">
+                                <img src="images/ginger2.png" class="img-fluid w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#imageSlides"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#imageSlides"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    -->
+
+                    <!-- Ingredient picture -->
+                    <div class="img-fluid"><img class="img-fluid w-100" id="main-image" src="images/ginger.jpg"></div>
+                </div>
+
+                <!-- Name, hold/cold, category -->
+                <div class="row justify-content-md-center align-items-center">
+
+                    <div id="ingredientName" class="col-md-4 p-3 text-center" style="font-size: 3vh;">
+                        Ginger<br>
+                        <div class="notranslate">
+                            生姜<br>
+                            ショウガ<br>
+                            生姜생강<br>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-3">
+                        <img class="img-fluid" id="hotCold" src="images/cold.svg">
+                    </div>
+                    <div class="col-md-4 p-3">
+                        <img class="img-fluid" id="category"  src="images/vegatable.svg">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="d-flex flex-row justify-content-md-left align-items-top">
+            <div id="google_translate_element"></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- Uncomment for translation support of page -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+    <!-- -->
+
+</body>
+
+</html>
