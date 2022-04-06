@@ -23,20 +23,23 @@
 <title>Ingredients Page</title>
 
 <body>
-    
-    <!-- Top level switcher -->
+    <script src='./javascript/data.js'></script>
+    <script src='./javascript/logic.js'></script>
+
     <div class="container">
         <div class="dropdown">
             <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="ingredientsMenu"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Ingredient
             </button>
-            <!-- Dynamically filled in -->
-            <ul class="dropdown-menu" id="ingredientMenu" aria-labelledby="ingredientsMenu">
+            <ul class="dropdown-menu" aria-labelledby="ingredientsMenu">
+                <li><a class="dropdown-item" href="#" onclick="switchIngredient('Ginger')">Ginger</a></li>
+                <li><a class="dropdown-item" href="#" onclick="switchIngredient('Garlic')">Garlic</a></li>
+                <li><a class="dropdown-item" href="#" onclick="switchIngredient('Mushroom')">Mushroom</a></li>
             </ul>
         </div>
-    </div>    
-
+    </div>
+    
     <section>
     <div class="container">
 
@@ -50,26 +53,35 @@
                     <img class="img-fluid" src="images/Benefits3.svg">
                 </div>
                 <div class="p-1">
-                    <!-- Dynamically filled in -->
                     <div id="benefits-text" class="scrolltext">
+                        <ul>
+                            <li>Contains gingerol, which has powerful medicinal properties.
+                            <li>Can treat many forms of nausea, especially morning sickness.
+                            <li>May help with weight loss.
+                            <li>Can help with osteoarthritis.
+                            <li>May drastically lower blood sugars and improve heart disease risk factors.
+                            <li>Can help treat chronic indigestion.
+                        </ul>
                     </div>
                 </div>
 
                 <div><br></div>
                 <!-- Origin / History  -->
                 <div class="p-1">
-                    <img class="img-fluid" src="images/Origin3.svg">
+                    <img class="img-fluid" src="images/Origin2.svg">
                 </div>
                 <div class="p-1 h-25">
-                    <!-- Dynamically filled in -->
                     <iframe id="origin-map"
-                        src=""
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56592457.93916351!2d67.47499015074814!3d30.033142049231426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChina!5e0!3m2!1sen!2sca!4v1647628105514!5m2!1sen!2sca"
                         width=100% height=100% allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
                 <div class="p-1">
-                    <!-- Dynamically filled in -->
                     <div id="history-text" class="scrolltext" style="min-height: 10vh;" ;>
+                        The known history of ginger dates back about 5000 years. Its native home is debated but its
+                        medicinal and spiritual uses were first documented in Southeast Asia, India and China. Like many
+                        other spices, ginger was once a costly commodity. In the 14th century, a pound of ginger cost as
+                        much as one sheep!
                     </div>
                 </div>
             </div>
@@ -78,7 +90,7 @@
             <div class="col-md-8">
 
                 <div class="row ">
-                    <!-- Multiple image template to add
+                    <!--
                     <div id="imageSlides" class="carousel slide carousel-fade" 
                         data-bs-ride="carousel"
                         data-bs-interval="false">
@@ -109,20 +121,26 @@
                     </div>
                     -->
 
-                    <!-- Ingredient picture. Dynamically set -->
-                    <div class="img-fluid"><img class="img-fluid w-100" id="main-image" src=""></div>
+                    <!-- Ingredient picture -->
+                    <div class="img-fluid"><img class="img-fluid w-100" id="main-image" src="images/ginger.jpg"></div>
                 </div>
 
-                <!-- Name, hold/cold, category. Dynamically set -->
+                <!-- Name, hold/cold, category -->
                 <div class="row justify-content-md-center align-items-center">
 
                     <div id="ingredientName" class="col-md-4 p-3 text-center" style="font-size: 3vh;">
+                        Ginger<br>
+                        <div class="notranslate">
+                            生姜<br>
+                            ショウガ<br>
+                            生姜생강<br>
+                        </div>
                     </div>
                     <div class="col-md-4 p-3">
-                        <img class="img-fluid" id="hotCold" src="">
+                        <img class="img-fluid" id="hotCold" src="images/cold.svg">
                     </div>
                     <div class="col-md-4 p-3">
-                        <img class="img-fluid" id="category"  src="">
+                        <img class="img-fluid" id="category"  src="images/vegatable.svg">
                     </div>
                 </div>
 
@@ -138,21 +156,17 @@
 
 </section>
 
-<!-- Set callback to translate -->
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-</script>
 
-<!-- Set up ingredients -->
-<script type='text/javascript' src='./javascript/data.js'></script>
-<script type='text/javascript' src='./javascript/logic.js'></script>
-<script type='text/javascript'>
-    initializeTemplate();        
-</script>
+    <!-- Uncomment for translation support of page -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+    <!-- -->
 
 </body>
 
