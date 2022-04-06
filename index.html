@@ -23,7 +23,7 @@
 <title>Ingredients Page</title>
 
 <body>
-    
+
     <!-- Top level switcher -->
     <div class="container">
         <div class="dropdown">
@@ -138,20 +138,23 @@
 
 </section>
 
-<!-- Set callback to translate -->
+<!-- Set callback to translate 
 <script type="text/javascript">
     function googleTranslateElementInit() {
             new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
     }
 </script>
-<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
+-->
 
 <!-- Set up ingredients -->
 <script type='text/javascript' src='./javascript/data.js'></script>
 <script type='text/javascript' src='./javascript/logic.js'></script>
 <script type='text/javascript'>
-    initializeTemplate();        
+    loadData();
+    addMenuItems();
+    switchIngredient('Mushroom');
 </script>
 
 </body>
